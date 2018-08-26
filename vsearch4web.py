@@ -12,7 +12,7 @@ app.config['dbconfig'] = {'host': '127.0.0.1',
 
 
 def log_request(req: 'flask_request', res: str) -> None:
-  """Lof details of the web request and the results."""
+  """Log details of the web request and the results."""
 
   with UseDatabase(app.config['dbconfig']) as cursor:
     _SQL = """insert into log
